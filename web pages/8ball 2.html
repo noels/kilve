@@ -1,0 +1,54 @@
+<http>
+
+Brought To You By httpsites.blogspot.co.uk
+
+
+<FORM>
+<INPUT TYPE="TEXT" 
+VALUE="Question Me">
+<INPUT TYPE="BUTTON" 
+VALUE="Ask" ONCLICK="getAnswer()">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+
+function getAnswer()
+{
+	// create array of answers
+	
+var ar = new Array(10)
+	
+ar[0] = "YES!"
+	
+ar[1] = "Definitely, yes ."
+	
+ar[2] = "Absolutely positive."
+	
+ar[3] = "Why yes"
+	
+ar[4] = "I would be inclined to think yes."
+	
+ar[5] = "exalent."
+	
+ar[6] = "Possibly yes."
+	
+ar[7] = "I've heard something going around that says yes."
+	
+ar[8] = "Don't get your hopes up."
+	
+ar[9] = "yes. Absolutely."
+
+	
+var now = new Date()
+	
+var sec = now.getSeconds()
+	
+alert(ar[sec % 10])
+}
+
+//-->
+</SCRIPT>
+
+Brought To You By httpsites.blogspot.co.uk/
+</http>

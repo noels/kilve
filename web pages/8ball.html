@@ -1,0 +1,35 @@
+THIS SCRIPT BROUGHT TO YOU BY taylorswift.com 
+
+<FORM>
+<INPUT TYPE="TEXT" 
+VALUE="Your Question">
+
+<INPUT TYPE="BUTTON" VALUE="Ask"
+ ONCLICK="getAnswer()">
+<SCRIPT LANGUAGE="JavaScript">
+<!
+--
+
+function getAnswer()
+{
+	// create array of answers
+	var ar = new Array(10)
+	ar[0] = "YES! BEFORE IT'S TOO LATE!"
+	ar[1] = "Definitely, no question about it."
+	ar[2] = "Absolutely positive."
+	ar[3] = "lovley? It seems good from here."
+	ar[4] = "definitly."
+	ar[5] = "why yes."
+	ar[6] = "undefintly not."
+	ar[7] = "I've heard something going around that says yes."
+	ar[8] = "Don't get your hopes up."
+	ar[9] = "yes. Absolutely so."
+
+	var now = new Date()
+	var sec = now.getSeconds()
+	alert(ar[sec % 10])
+}
+
+//-->
+</SCRIPT>
+THIS SCRIPT BROUGHT TO YOU BY taylorswift.COM

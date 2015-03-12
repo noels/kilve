@@ -1,0 +1,43 @@
+<!DOCTYPE html >
+
+<html>
+
+<head>
+
+<title>Muybridge zoetrope</title>
+
+<script type="text/javascript">
+
+var image=new Array("images/frame1.jpg","images/zoe.jpg","images/frame2.jpg","images/zoe.jpg", "images/frame3.jpg",
+"images/zoe.jpg","images/frame4.jpg","images/zoe.jpg","images/frame5.jpg","images/zoe.jpg","images/frame6.jpg","images/zoe.jpg","images/frame7.jpg",
+"images/zoe.jpg",
+"images/frame8.jpg","images/zoe.jpg","imsges/frame9.jpg","images/zoe.jpg","images/frame10.jpg","images/zoe.jpg","images/frame11.jpg",
+"images/zoe.jpg","images/frame12.jpg","images/zoe.jpg");
+var timeout={};
+
+function stopIt(){
+   clearTimeout(timeout);
+}
+
+function changeimage(dvX){
+   var dvi=document.getElementById(dvX);
+   if(!dvi.count || dvi.count == image.length )
+      dvi.count=0;
+   dvi.src=image[dvi.count];
+   dvi.alt=image[dvi.count];
+   dvi.count=dvi.count+1;
+   timeout=setTimeout('changeimage("'+dvX+'")',100);
+}
+
+</script>
+
+</head>
+
+<body bgcolor=#000000>
+
+   <div><img src="t1" alt="test1" id="changer"/></div>
+   <div><button onclick="changeimage('changer')">Start</button></div>
+   <div><button onclick="stopIt()">Stop</button></div>
+   </body>
+</html>
+ 

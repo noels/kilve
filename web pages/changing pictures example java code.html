@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <title> picture slideshow </title>    
+<script type="text/javascript">
+            var image1 = "./images/changingpic2.jpg"
+            var image2 = "./images/changingpic3.jpg"
+            var image3 = "./images/changingpic4.jpg"
+        </script>
+    </head>
+    <body onLoad="slidit()">
+        <form name="images">
+            <img src="./images/pic1.jpg" name="slide" width="800" height="800" />
+            <script>
+                //variable that will increment through the images
+                var step = 0
+                function slideit(){
+                    //if browser does not support the image object, exit.
+                    switch(step){
+                        case 1:
+                            document.images.slide.src = image1;
+                            break;
+                        case 2:
+                            document.images.slide.src = image2;
+                            break;
+                        case 3:
+                            document.images.slide.src = image3;
+                            break;
+                    }
+                    if (step < 3) {
+                        step++
+                    }
+                    else {
+                        step = 1
+                    }
+                    //call function "slideit()" every 2 seconds
+                    setTimeout("slideit()", 2000)
+                }
+
+                slideit()
+            </script>
+        </form>
+    </body>
+</html>
